@@ -1,0 +1,15 @@
+.retailers-wrapper {
+    text-align: center;
+    margin: 0 13rem;
+    .retailers {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 768px) { 
+    .retailers-wrapper {
+        margin: 0;
+    }
+}

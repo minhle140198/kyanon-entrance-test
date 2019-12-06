@@ -1,0 +1,51 @@
+.feature-block {
+    text-align: center;
+    margin: 0 13rem;
+    @include e('header'){
+        padding: 0 26rem ;
+        margin: 7rem 0 4rem 0;
+    }
+    @include e('heading'){
+        font-family: 'iCel Samsung Sharp Sans Bold';
+        font-size: 6rem;
+        font-weight: bold;
+        margin-bottom: 4.5rem;
+        
+    }
+    @include e('description'){
+        font-family: 'SamsungOne 700';
+        font-weight: 400;
+        font-size: 1.8rem;
+        margin-bottom: 4.5rem;
+        @include m('note'){
+            font-size: 1.6rem;
+            margin-bottom: 3rem;
+        }
+    }
+    @include e('img'){
+        margin-bottom: 1rem;
+        img {
+            width: 100%;
+        }
+    }
+}
+.above-note{
+    margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 768px) { 
+    .feature-block {
+        margin: 0;
+        @include e('header'){
+            padding: 0 3rem ;
+            margin: 5rem 0 3.5rem 0;
+        }
+        @include e('heading'){
+            font-size: 4.5rem;
+            margin-bottom: 3rem;
+        }
+        @include e('description'){
+            margin-bottom: 3rem;
+        }
+    }
+}

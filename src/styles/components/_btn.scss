@@ -1,0 +1,63 @@
+.btn {
+    border: 2px solid #000000;
+    border-radius: 999px;
+    width: 20rem;
+    height: 5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.8rem;
+    background: #ffffff;
+}
+.btn--blue {
+    border-color: #044ea2;
+    color: #044ea2;
+    width: 16rem;
+}
+.btn--white {
+    padding: 0 0.5rem;
+    border-color: #ffffff;
+    color: #ffffff;
+    width: 20rem;
+    font-size: 1.6rem;
+    background: none;
+}
+.btn--actived {
+    padding: 0 0.5rem;
+    border-color: #ffffff;
+    color: #257aba;
+    width: 20rem;
+    font-size: 1.6rem;
+    background: #ffffff;;
+}
+.btn-sale {
+    margin: 0 3rem;
+    display: flex;
+    text-transform: uppercase;
+    border: none;
+    font-size: 2rem;
+    // font-family: 'SamsungOne 700';
+    // font-weight: 500;
+    background-color: #ffffff;
+    cursor: pointer;
+    &:hover {
+        color: #044ea2;
+    }
+}
+
+.btn-sale--unactived {
+    color: #cecece;
+    cursor: default;
+    &:hover {
+        color: #cecece;
+    }
+}
+
+
+@media only screen and (min-width: 769px) {
+    .btn__collapse {
+      display: none;
+    }
+    .btn__search {
+        display: none;
+      }
+  }

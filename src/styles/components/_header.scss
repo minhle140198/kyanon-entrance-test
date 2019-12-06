@@ -1,0 +1,134 @@
+.header {
+    
+    font-family: 'SamsungOne 700';
+    font-weight: 500;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    position: fixed;
+    width: 100%;
+    background: #ffffff;
+    z-index: 999999999;
+    
+
+    // flex-wrap: wrap;
+    .header__nav{
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        height: 9rem;
+        padding: 0 8rem;
+        position: relative;
+
+        img {
+            position: absolute;
+            left: 50%;
+            margin-left: -125px;
+            max-width:250px;
+            width:100%;
+        }
+        ul{
+            list-style-type: none;
+            display: flex;
+            padding-left: 0;
+            flex-wrap: wrap;
+    
+            li{
+                margin: auto 1.5rem;
+                a{
+                    text-decoration: none;
+                    color: #000000;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .header {
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        background: #ffffff;
+        height: 10rem;
+        
+        // background: #ffffff;
+        .img-small-divices{
+            display: inline-block!important;
+            position: fixed;
+            top: 0.8rem;
+            left: 50%;
+            margin-left: -12rem;
+            max-width:24rem;
+            width:100%;
+        }
+        
+        .header__nav{
+            justify-content: flex-start;
+            flex-direction: column;
+            position: fixed;
+            top: 2rem;
+            left: 0;
+            width: 100%;
+            z-index: 9;
+            transform: translateX(-100%);
+            transition: transform .25s linear;
+            margin-left: -10rem;
+            margin-top: 5rem;
+            img{
+                display: none;
+            }
+            ul {
+                flex-direction: column;
+                margin: 0;
+                li {
+                    margin-top: 1.5rem;
+                    margin-bottom: 1.5rem;
+                }
+            }
+            ul:last-child {
+                li:last-child {
+                    display: none;
+                }
+            }
+        }
+           
+       
+
+        .btn__search {
+            position: fixed;
+            top: 1.8rem;
+            right: 1.8rem;
+            width: 5rem;
+            height: 5rem;
+            font-size: 2rem;
+            border-radius: 5rem;
+            text-align: center;
+            line-height: 5rem;
+            cursor: pointer;
+            z-index: 1000000;
+        }
+        .btn__collapse {
+            position: fixed;
+            top: 1.8rem;
+            left: 1.8rem;
+            width: 5rem;
+            height: 5rem;
+            font-size: 2rem;
+            border-radius: 5rem;
+            text-align: center;
+            line-height: 5rem;
+            cursor: pointer;
+            z-index: 1000000;
+        }
+        .input-collapse:checked ~ .header__nav {
+            transform: translateX(0);
+            height: 100vh;
+            background: #ffffff;
+            top: -5rem;
+            padding-top: 5rem;
+        }
+       
+    }
+    
+}

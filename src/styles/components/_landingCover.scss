@@ -1,0 +1,266 @@
+
+.landing-cover{
+    position: relative;
+    background-image: url("../../assets/images/landing-background.png");
+    display: flex;
+    height: 120rem;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 3rem;
+    z-index: -1;
+    @include e('introduce'){
+        margin-top: 9rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include e('text') {
+            font-family: 'iCel Samsung Sharp Sans Bold';
+            color: #ffffff;
+            text-align: center;
+            h1{
+                font-size: 7rem;
+                margin: 0;
+            }
+            h3 {
+                font-size: 6rem;
+                margin: 0;
+            }
+        }
+        @include e('item') {
+            max-width: 78rem;
+            width: 90%;
+            height: auto;
+            // position: absolute;
+            top: 9rem;
+            right: 13rem;
+            &:hover{
+                transform: scale(1.1); /* Equal to scaleX(0.7) scaleY(0.7) */
+                -webkit-transition: all 1s ease-in-out;
+                -moz-transition: all 1s ease-in-out;
+                -o-transition: all 1s ease-in-out;
+                transition: all 1s ease-in-out;
+            }
+        }
+    }
+    @include e('sale-off'){
+        margin-top: 5rem;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        @include e('text'){
+            font-family: 'iCel Samsung Sharp Sans Bold';
+            color: #ffffff;
+            text-align: center;
+            h3 {
+                font-size: 6rem;
+                margin: 0;
+            }
+        }
+        @include e('option') {
+            display: flex;
+            button{
+                margin: 2rem;
+            }
+        }
+    }
+    @include e('information'){
+        position: absolute;
+        bottom: -37.4rem;
+        width: 130rem;
+        height: 37rem;
+        border: 3px solid sandybrown;
+        border-top: none;
+        display: flex;
+    /* align-items: center; */
+    justify-content: center;
+        @include e('gifts'){ 
+
+        }
+        @include e('item'){ 
+
+            .text{
+                color: #ffffff;
+                font-family: 'iCel Samsung Sharp Sans Bold';
+                font-size: 2rem;
+                position: absolute;
+                @include m('one'){
+                    top: -23rem;
+                    left: 25%;
+                }
+                @include m('two'){
+                    top: -23rem;
+                    right: 19%;               
+                }
+            }
+            .watch-box{
+                position: absolute;
+                max-width: 28rem;
+                width: 100%;
+                left: 30rem;
+                 top: -37rem;
+                //transform: rotate(90deg) translate(-35rem, -32rem);
+                transform: rotate(90deg);
+            }
+            .watch-strap {
+                position: absolute;
+                max-width: 28rem;
+                width: 100%;
+                left: 34rem;
+                top: -35rem;    
+                //transform: rotate(90deg) scale(0.8) translate(-41rem, -46rem);
+                transform: rotate(90deg) scale(0.8);
+            }
+            .zero-percent {
+                max-width: 28rem;
+                width: 100%;
+                position: absolute;
+                right: 11rem;
+                top: -16rem;
+            }
+            @include e('color') {
+                position: absolute;
+                top: 11rem;
+                left: 12rem;
+                width: 67rem;
+                height: 10rem;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                .small-text{
+                    font-family: 'SamsungOne 400';
+                    flex-basis: 100%;
+                    text-align: center;
+                    font-size: 1.6rem;
+                }
+                .paas {
+                    border-radius: 999px;
+                    height: 4rem;
+                    width: 4rem;
+                    margin: 1rem 1.2rem;
+                    
+                }
+                .one {
+                    background: #932d2a;
+                }
+                .two{
+                    background: #000000;
+                }
+                .three{
+                    background: #62403b;
+                }
+                .four{
+                    background: #253149;
+                }
+                .five{
+                    background: #584c5f;
+                }
+                .six{
+                    background: #6d7077;
+                }
+                .seven{
+                    background: #a9aaae;
+                }
+                .eight{
+                    background: #f0d55c;
+                }
+                .nine{
+                    background: #d5bab0;
+                 
+                }
+                .ten{
+                    border: 1px solid black;
+                    background: #ffffff;
+
+                }
+            }
+        }
+        @include e('date') {
+            position: absolute;
+            font-size: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            bottom: 0;
+            p{
+                margin-top: 0;
+                margin-bottom: 2rem;
+            }
+            
+        }
+    } 
+}
+
+@media only screen and (max-width: 768px) { 
+    .landing-cover {
+        max-height: 110rem;
+        margin-top: 10rem;
+        @include e('sale-off'){
+            margin-top: 0;
+            @include e('text'){
+                h3 {
+                    font-size: 3.5rem;
+                    margin: 0 3rem;
+                }
+            }
+            @include e('option'){
+                button{
+                    margin: 0.5rem;
+                }
+            }
+         
+        }
+        @include e('introduce'){
+           flex-direction: column;
+           margin-top: 5rem;
+            @include e('text'){
+                h1{
+                    font-size: 3.5rem;
+                }
+                h3{
+                    font-size: 3.5rem;
+                }
+            }
+            @include e('item'){
+                transform: scale(0.7);
+               
+               
+                
+            }
+        }
+        @include e('information'){
+            width: 90%;
+            display: none;
+            
+
+            @include e('item') {
+                .watch-box{
+                    position: absolute;
+                    max-width: 28rem;
+                    width: 100%;
+                    left: 30rem;
+                     top: -37rem;
+                    //transform: rotate(90deg) translate(-35rem, -32rem);
+                    transform: rotate(90deg);
+                    display: none;
+                }
+                .watch-strap {
+                    position: absolute;
+                    max-width: 28rem;
+                    width: 100%;
+                    left: 34rem;
+                    top: -35rem;    
+                    //transform: rotate(90deg) scale(0.8) translate(-41rem, -46rem);
+                    transform: rotate(90deg) scale(0.8);
+                    display: none;
+                }
+                .zero-percent {
+                    transform: scale(0.7);
+                    right: 0rem;
+                    top: -18rem;
+                }
+            }
+        }
+    }
+}
